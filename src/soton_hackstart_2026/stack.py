@@ -7,11 +7,11 @@ class Stack:
         self.data = {}
 
     def pointer_up(self):
-        self.py += 1
+        self.py -= 1
         assert 0 <= self.py <= self.width
 
     def pointer_down(self):
-        self.py -= 1
+        self.py += 1
         assert 0 <= self.py <= self.width
 
     def pointer_left(self):
