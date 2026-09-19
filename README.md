@@ -1,12 +1,12 @@
-# ASDFGHJKL
-2d esolang with 2d memory matrix of the same size as your program and a single register
+# Bramble
+2d esolang with 2d memory matrix of the same size as the program
 
 ## Interpreter management
 The descriptions are formatted as [read direction A:read direction B], and if the interpreter is reading from either direction it will read in the new direction instead.
 If a direction is not mentioned, an error will be raised
 |Opcode|Description|
 |---|---|
-|t|Terminate program (note: ASDFGHJKL interpreter will throw an error if it reaches the edge of the square before hitting this opcode)|
+|t|Terminate program (note: The bramble interpreter will throw an error if it reaches the edge of the square before hitting this opcode)|
 |u|Start thread in this position heading up when the program is run|
 |d|Start thread in this position heading down when the program is run|
 |l|Start thread in this position heading left when the program is run|
