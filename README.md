@@ -1,8 +1,8 @@
 1. create a login page
 2. create captchas
  - moving I'm not a robot checkbox, move 5 times then allows
- - phone number yahtzee
- - randomize keyboard keys
+ - phone number yahtzee - ashley
+ - randomize keyboard keys - ashley
  - sliding puzzle
  - 12 step verification
  - draw your country flag
