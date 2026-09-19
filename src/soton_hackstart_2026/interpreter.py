@@ -16,6 +16,8 @@ class Interpreter:
         self.ignore = False
 
     def advance(self, parser, memory, width, input_func, output_func):
+        print("Int:", self.x, self.y, self.direction)
+        print("MEM:", memory.data)
         if self.terminated:
             return
 
@@ -97,3 +99,5 @@ class Interpreter:
             return
         else:
             raise NotImplementedError(istruction)
+
+        print("Mem:", memory.px, memory.py, memory.read_raw())
