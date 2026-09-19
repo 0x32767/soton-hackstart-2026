@@ -9,6 +9,6 @@
  - longest every mandatory to read t&c
  - accept cookies x many times
  - have a time limit, if not completed refreshes all progress
- - 
+ - wefubwe
 3. add ads
 4. 
