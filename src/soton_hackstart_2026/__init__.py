@@ -3,9 +3,8 @@ from soton_hackstart_2026.parser import Parser
 from soton_hackstart_2026.stack import Stack
 
 
-def run():
-    with open("examples/cat.brm", "r") as f:
-        parser = Parser(f.read())
+def run(text: str, input_func, output_func):
+    parser = Parser(text)
 
     memory = Stack(parser.size, parser.size)
     interpreters = [
@@ -24,7 +23,7 @@ def run():
 
     while True:
         for interpreter in interpreters:
-            interpreter.advance(parser, memory, parser.size)
+            interpreter.advance(parser, memory, parser.size, input_func=input_func, output_func=output_func)
 
 def main() -> None:
     run()

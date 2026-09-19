@@ -15,7 +15,7 @@ class Interpreter:
         self.terminated = False
         self.ignore = False
 
-    def advance(self, parser, memory, width):
+    def advance(self, parser, memory, width, input_func, output_func):
         if self.terminated:
             return
 
@@ -46,7 +46,7 @@ class Interpreter:
         elif instruction == "v":
             memory.pointer_down()
         elif instruction == "i":
-            data = input()
+            data = input_func()
             if len(data) == 1:
                 memory.write(ord(data))
             elif len(data) == 0:
@@ -55,7 +55,7 @@ class Interpreter:
                 assert False
         elif instruction == "o":
             char = memory.read()
-            print(char)
+            output_func(char)
         elif instruction == " ":
             return
         elif instruction == "/":
