@@ -21,8 +21,10 @@ def run(text: str, input_func, output_func):
         for (x, y), direction in parser.get_starts()
     ]
 
-    while True:
+    alive = True
+    while alive:
         for interpreter in interpreters:
+            alive = alive or (not interpreter.terminated)
             interpreter.advance(parser, memory, parser.size, input_func=input_func, output_func=output_func)
 
 def main() -> None:
