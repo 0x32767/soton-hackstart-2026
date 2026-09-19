@@ -7,6 +7,8 @@ default_settings = {
     "navbar_items": [
         ["/", "Home"],
         ["/example-page", "Example"],
+        # ["/ashley", "ASHLEY"],
+        # ashley was here
     ]
 }
 
