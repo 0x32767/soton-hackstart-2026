@@ -31,6 +31,10 @@ class Interpreter:
         assert 0 <= self.x <= width, f"fell off to the left or right {self.x} between 0 and {width}"
         assert 0 <= self.y <= width, f"Fell off to the top or bottom {self.y} between 0 and {width}"
 
+        if self.ignore:
+            self.ignore = False
+            return
+
         instruction = parser.read_instruction(self.x, self.y)
 
         if instruction == "+":
@@ -86,6 +90,7 @@ class Interpreter:
             self.terminated = True
         elif instruction == "x":
             self.ignore = (memory.read_raw() == 0)
+            print(self.ignore)
         elif instruction == "X":
             self.ignore = (memory.read_raw() != 0)
         elif instruction in "lrud":
