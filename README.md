@@ -16,6 +16,7 @@ If a direction is not mentioned, an error will be raised
 |\||[left:left][right:right]|
 |_|[up:up][down:down]|
 |x|If the current memory cell is 0, the next opcode hit is ignored|
+|X|If the current memory cell is not 0, the next opcode hit is ignored|
 
 ## Memory management
 |Opcode|Description|
