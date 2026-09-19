@@ -45,7 +45,7 @@ class Interpreter:
             memory.pointer_left()
         elif instruction == ">":
             memory.pointer_right()
-        elif instruction == "<":
+        elif instruction == "^":
             memory.pointer_up()
         elif instruction == "v":
             memory.pointer_down()
