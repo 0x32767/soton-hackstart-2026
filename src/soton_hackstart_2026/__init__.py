@@ -26,4 +26,4 @@ def run(text: str, input_func, output_func):
             interpreter.advance(parser, memory, parser.size, input_func=input_func, output_func=output_func)
 
 def main() -> None:
-    run()
+    import soton_hackstart_2026.IDE_GUI

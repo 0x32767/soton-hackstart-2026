@@ -7,7 +7,9 @@ authors = [
     { email = "hfoster08" }
 ]
 requires-python = ">=3.14"
-dependencies = []
+dependencies = [
+    "guizero>=1.6.0",
+]
 
 [project.scripts]
 soton-hackstart-2026 = "soton_hackstart_2026:main"
