@@ -32,7 +32,7 @@ class Stack:
         return chr(self.data[(self.px, self.py)])
 
     def read_raw(self):
-        return self.data[(self.px, self.py)]
+        return self.data.get((self.px, self.py), 0)
 
     def write(self, value: int):
         self.data[(self.px, self.py)] = value
