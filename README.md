@@ -1,5 +1,5 @@
 # Bramble
-2d esolang with 2d memory matrix of the same size as the program
+2d esolang with 2d memory matrix of the same size as the program.
 
 ## Interpreter management
 The descriptions are formatted as [read direction A:read direction B], and if the interpreter is reading from either direction it will read in the new direction instead.
@@ -14,14 +14,14 @@ If a direction is not mentioned, an error will be raised
 |/|[left:up][right:down]|
 | \\ |[left:down][right:up]|
 |\||[left:left][right:right]|
-|-|[up:up][down:down]|
+|_|[up:up][down:down]|
 |x|If the current memory cell is 0, the next opcode hit is ignored|
 
 ## Memory management
 |Opcode|Description|
 |------|-----------|
-|+|Increment the top of the current stack|
-|-|Decrement top of current stack|
+|+|Increment the current cell|
+|-|Decrement top of current cell|
 |<|Move pointer left|
 |>|Move pointer right|
 |^|Move pointer up|
