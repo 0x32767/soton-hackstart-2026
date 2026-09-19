@@ -24,6 +24,6 @@ If a direction is not mentioned, an error will be raised
 |l|Start thread in this position heading left when the program is run|
 |r|Start thread in this position heading right when the program is run|
 |/|[left:up][right:down]|
-|\\|[left:down][right:up]|
+| \\ |[left:down][right:up]|
 |\||[left:left][right:right]|
 |-|[up:up][down:down]|
