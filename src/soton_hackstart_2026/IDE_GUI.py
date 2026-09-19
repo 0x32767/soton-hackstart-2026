@@ -1,6 +1,8 @@
 from guizero import App, Window, Text, PushButton, TextBox, Box, ListBox, info, question
 from soton_hackstart_2026 import run
 
+program_text = ""
+
 def run_code():
     code_box.value
     run(code_box.value, get_input, display_output)
@@ -11,7 +13,11 @@ def get_input():
     return question("Program Input", "Please input one character")
 
 def display_output(text):
-    output_box.append(text)
+    global program_text
+    program_text += text
+    output_box.clear()
+    output_box.append(program_text)
+
 
 
 
@@ -32,6 +38,8 @@ project_title = Text(project_title_box, text="Project", align="left")
 
 code_box = TextBox(window, height="15", width="fill", align="top", multiline=True)
 output_box = TextBox(window, height="15", width="fill", align="top", multiline=True)
+
+program_text = ""
 
 
 
