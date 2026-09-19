@@ -6,7 +6,7 @@ app = Flask(__name__)
 default_settings = {
     "navbar_items": [
         ["/", "Home"],
-        # ["/example-page", "Example"],
+        ["/example-page", "Example"],
     ]
 }
 
