@@ -1,7 +1,16 @@
-from guizero import App, Window, Text, PushButton, TextBox, Box, ListBox
+from guizero import App, Window, Text, PushButton, TextBox, Box, ListBox, info, question
+from soton_hackstart_2026 import run
+
+def run_code():
+    code_box.value
+    run(code_box.value, get_input, display_output)
 
 
+def get_input():
+    return question("Program Input", "Please input one character")
 
+def display_output(text):
+    info(title="Program Output", text=text)
 
 
 
@@ -14,12 +23,13 @@ new_button = PushButton(file_box, text="New", align="top")
 open_button = PushButton(file_box, text="Open", align="top")
 
 options_box = Box(window, height="fill", align="left")
+run_button = PushButton(options_box, text="Run", align="top", command=run_code)
 save_button = PushButton(options_box, text="Save", align="top") #command=save_project)
 
 project_title_box = Box(window, width="fill", align="top", border=True)
 project_title = Text(project_title_box, text="Project", align="left")
 
-TextBox(window, height="fill", width="fill", align="top", multiline=True)
+code_box = TextBox(window, height="fill", width="fill", align="top", multiline=True)
 
 
 
